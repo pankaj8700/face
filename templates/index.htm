@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <title>Upload an Image</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body border="5" background-color=black>
+    <div class="header" align="center">
+        <h1><u>Face Detection Web Page</u></h1>
+        <h1><u>Upload an image and see the face detection result</u></h1>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+    <a href="{{ url_for('video_feed') }}" target="_blank">
+        <img src="{{ url_for('video_feed') }}" controls>
+    </a>
+</body>
+</html>
